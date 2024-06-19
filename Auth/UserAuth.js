@@ -1,6 +1,8 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const db = require('../firebase');
+const upload = require('./uploadMiddleware');
+const { bucket } = require('../firebaseAdmin'); // Mengimpor bucket dari firebaseAdmin
 
 
 const router = express.Router();
@@ -78,7 +80,7 @@ module.exports = router;
 
 
 //Endpoint Login
-router.post('/login', async (reg, res)=> {
+router.post('/login', async (req, res)=> {
     try{
         const {username, password} = req.body;
 
@@ -185,6 +187,36 @@ router.post('/reset-password', async (req, res) => {
     res.status(200).send('Password changed successfully');
   } catch (error) {
     res.status(500).send('Error changing password: ' + error.message);
+  }
+});
+
+
+// Endpoint untuk upload foto/video
+router.post('/upload', upload.single('file'), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).send('No file uploaded.');
+  }
+
+  try {
+    const blob = bucket.file(req.file.originalname);
+    const blobStream = blob.createWriteStream({
+      metadata: {
+        contentType: req.file.mimetype,
+      },
+    });
+
+    blobStream.on('error', (err) => {
+      res.status(500).send({ error: 'Error uploading file: ' + err.message });
+    });
+
+    blobStream.on('finish', async () => {
+      const publicUrl = `https://storage.googleapis.com/${process.env.BUCKET_NAME}/${blob.name}`;
+      res.status(200).send({ message: 'File uploaded successfully', url: publicUrl });
+    });
+
+    blobStream.end(req.file.buffer);
+  } catch (error) {
+    res.status(500).send('Error uploading file: ' + error.message);
   }
 });
 
