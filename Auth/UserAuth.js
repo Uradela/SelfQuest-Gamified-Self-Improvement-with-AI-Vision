@@ -190,8 +190,13 @@ router.post('/upload', upload.single('file'), async (req, res) => {
 
     blobStream.end(req.file.buffer);
   } catch (error) {
-    res.status  (500).send('Error uploading file: ' + error.message);
+    if (error.code === 403 && error.message.includes('The billing account for the owning project is disabled')) {
+      res.status(403).send('Billing account is disabled. Please enable the billing account for this project.');
+    } else {
+      res.status(500).send('Error uploading file: ' + error.message);
+    }
   }
 });
+
 
 module.exports = router;
