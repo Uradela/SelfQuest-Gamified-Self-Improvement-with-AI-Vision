@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "331338152993",
+    "project_id": "capstone-selfquest-gamified",
+    "storage_bucket": "capstone-selfquest-gamified.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331338152993:android:fbf1a2987bee074de17760",
+        "android_client_info": {
+          "package_name": "com.dutaram.selfquest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeJZfXmvrgGDzdpLqk7uuArw93_R7JZ0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

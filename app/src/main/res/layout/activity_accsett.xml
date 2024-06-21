@@ -1,0 +1,106 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#0C1821"
+    tools:context=".Accsettingact">
+
+    <ImageView
+        android:id="@+id/profile_image_edit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_profile"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/edit_profile_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image_edit"
+        android:layout_centerHorizontal="true"
+        android:text="Edit your photo" />
+
+    <TextView
+        android:id="@+id/username_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_profile_image_button"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="Lebron James"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text_view_background"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_text_view"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Lebronjames22@gmail.com"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text_view_background"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/age_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_text_view"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="32"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text_view_background"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/gender_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age_text_view"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Male"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text_view_background"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/weight_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gender_text_view"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="63 Kg"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/text_view_background"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/save_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weight_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Save" />
+
+</RelativeLayout>

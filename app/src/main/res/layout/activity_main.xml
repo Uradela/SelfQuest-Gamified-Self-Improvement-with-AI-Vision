@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C1821"
+    tools:context=".MainActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-450dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/box"
+        android:visibility="visible" />
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_profile" />
+
+    <!-- Camera Preview -->
+
+    <!-- Banner Image -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/banner_home" />
+
+    <!-- Greeting Text -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Hello James,"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true" />
+
+    <!-- Workout Plan Text -->
+    <TextView
+        android:id="@+id/tvWorkoutPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvGreeting"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Workout Plan"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- Use Camera Button -->
+
+    <!-- Description Text -->
+
+
+    <Button
+        android:id="@+id/btnRequestCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView10"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="80dp"
+        android:text="Use Camera" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWorkoutPlan"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="61dp"
+        android:text="Do your exercise at home accompanied by our AI."
+        android:textColor="#000000"
+        android:textSize="18dp" />
+
+</RelativeLayout>
